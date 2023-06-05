@@ -29,30 +29,50 @@ F=(((C.B'.A)+(D.C'.A)+(C.B'.A))')'
 ## Program:
 /*
 Program to implement the given logic function and to verify its operations in quartus using Verilog programming.
+
 Developed by: Shakthi kumar S
+
 RegisterNumber: 212222110043
+
 */
 ### NAND GATE:
 module EXtwo(a,b,c,d,o);
+
 input a,b,c,d;
+
 output o;
+
 wire o1,o2,o3;
+
 assign o1 = (~c&~b&~a);
+
 assign o2 = (~d&~c&~a);
+
 assign o3 = (c&~(~b)&~a);
+
 assign o= o1&~o2&~o3;
+
 endmodule
 
 ### NOR GATE
 module EXtwo(a,b,c,d,o);
+
 input a,b,c,d;
+
 output o;
+
 wire o1,o2,o3,o4;
+
 assign o1 = c&(~b)&a;
+
 assign o2 = d&(~c)&a;
+
 assign o3 = c&(~b)&a;
+
 assign o4 = ~(o1|o2|o3);
+
 not(o,o4);
+
 endmodule
 
 ## Output:
